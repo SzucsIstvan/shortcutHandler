@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World</title>
+</head>
+
+<body tabindex="1"  tabindex="4">
+    <h1>Hello1</h1>
+
+    <form tabindex="2">
+        <input tabindex="3" onfocus="window.handler.stop(window)" onfocusout="window.handler.start(window)"/>
+        <input tabindex="4" onfocus="window.handler.start(this)" onfocusout="window.handler.stop(this)" />
+    </form>
+
+     <script src="dist/main.js"></script>
+</body>
+</html>
