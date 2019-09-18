@@ -7,3 +7,12 @@ const handler = new sh();
 window.handler = handler;
 
 handler.start();
+handler.setFilter((dom, e) => {
+    console.log("filter", dom, e)
+    if (dom.id === 'third')  {
+        return false;
+    }
+
+    return true;
+
+});

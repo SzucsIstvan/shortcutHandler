@@ -9,8 +9,22 @@
     <h1>Hello1</h1>
 
     <form tabindex="2">
-        <input tabindex="3" onfocus="window.handler.stop(window)" onfocusout="window.handler.start(window)"/>
-        <input tabindex="4" onfocus="window.handler.start(this)" onfocusout="window.handler.stop(this)" />
+        <label for="first">Func1</label>
+        <input tabindex="3"
+               id="first"
+               onfocusin="window.handler.setScope('firstInput')"
+               onfocusout="window.handler.setScope('all')" />
+        <br>
+
+        <label for="second">Func2</label>
+        <input tabindex="4" id="second"
+               onfocusin="window.handler.setScope('input')"
+               onfocusout="window.handler.setScope('all')" />
+        <hr>
+        <label for="third">
+            Nem kapja el a handler
+        </label><br>
+        <textarea id="third"></textarea>
     </form>
 
      <script src="dist/main.js"></script>
